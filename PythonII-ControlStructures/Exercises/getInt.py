@@ -19,7 +19,7 @@
 def get_integer(my_var):
     try:
         return int(my_var)
-    except ValueError as error:
+    except (TypeError, ValueError) as error:
         return error
 
 
