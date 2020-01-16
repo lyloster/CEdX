@@ -16,7 +16,7 @@ def get_integer(my_var):
     try:
         return int(my_var)
     except:
-        print("Cannot convert!")
+        return "Cannot convert!"
 
 
 #Below are some lines of code that will test your function.
@@ -29,5 +29,3 @@ def get_integer(my_var):
 print(get_integer("5"))
 print(get_integer("Boggle."))
 print(get_integer(5.1))
-
-
