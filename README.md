@@ -5,6 +5,7 @@ Courses:
 
 2020
 Computing in Python II: Control Structures
+Computing in Python III: Data Structures
 
 2019
 C Programming: Using Linux Tools and Libraries
