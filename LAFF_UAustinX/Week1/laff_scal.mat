@@ -1,0 +1,33 @@
+function [x_out] = laff_scal(alpha, x)
+% Scales a vector x by the scalar alpha
+
+%extract sizes of the vector x
+[m_x, n_x] = size(x);
+
+%make sure alpha is a scalar
+if(~isscalar(alpha))
+    x_out = "FAILED";
+    return
+end
+
+%make sure that x is a vector
+if(~isvector(x))
+    x_out = "FAILED";
+    return
+end
+
+if(n_x == 1) %x is a column vector
+    for i=1:m_x
+        x(i,1) = alpha * x(i,1)
+    end 
+else % x is a row vector
+    for i = 1:n_x
+        x(1,i) = alpha * x(1, i)
+    end    
+end
+
+%update y_out with y
+x_out = x;
+
+return
+end

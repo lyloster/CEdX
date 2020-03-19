@@ -1,0 +1,28 @@
+function [alpha] = laff_norm2(x)
+    % Compute the length of a vector x
+    %  x can be a 1xn or nx1 vector
+    % Function returns a scalar
+
+    % Check if x is a vector
+    if(~isvector(x))
+        alpha = "FAILED";
+        return
+    end
+    
+    % Save size of x
+    [m_x, n_x] = size(x);
+    
+    alpha = 0;
+    if(m_x == 1) % x is a column vector
+        for i = 1:n_x
+            alpha = sqrt(laff_dot(x,x));            
+        end
+    else %x is a row vector
+        for i = 1:m_x
+            alpha = sqrt(laff_dot(x,x));
+        end
+    end
+    
+    return
+end
+    
